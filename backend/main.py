@@ -7,9 +7,15 @@ load_dotenv()
 
 app = FastAPI()
 
+origins = [
+    "https://strikewise-frontend-cqge.vercel.app",
+    "https://strikewise-frontend-cqge-git-main-balaragavesh-g-ms-projects.vercel.app",
+    "https://strikewise-frontend-cqge-5er0i7u9h-balaragavesh-g-ms-projects.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # or specify your frontend URL(s) instead of "*"
+    allow_origins=origins,  # or specify your frontend URL(s) instead of "*"
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
