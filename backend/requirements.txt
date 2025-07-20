@@ -4,3 +4,6 @@ httpx
 pydantic
 python-dotenv
 requests
+numpy
+pandas
+scipy
