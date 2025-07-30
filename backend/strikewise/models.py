@@ -7,11 +7,11 @@ class AnalysisRequest(BaseModel):
     instrument_key: str
     expiry_date: str
     spot_target_gain: float
-    spot_sl_loss: float 
+    spot_sl_loss: float
     capital: float
     risk_tolerance: float
     minutes_to_hit_target: int
-    option_type: str  
+    option_type: str
 
 class Projection(BaseModel):
     Strike: float
@@ -41,3 +41,16 @@ class SelectedContract(BaseModel):
 class AnalysisResponse(BaseModel):
     projections: List[Projection]
     selected_contracts: List[SelectedContract]
+
+# --- Models for Authentication ---
+
+class User(BaseModel):
+    id: Optional[str] = None # Firebase UID
+    email: str
+    name: Optional[str] = None
+    picture: Optional[str] = None
+
+class AuthResponse(BaseModel):
+    access_token: str # This is your backend's JWT
+    token_type: str = "bearer"
+    user: User

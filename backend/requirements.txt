@@ -7,3 +7,5 @@ requests
 numpy
 pandas
 scipy
+python-jose[cryptography]
+firebase-admin
