@@ -11,9 +11,9 @@ app = FastAPI()
 
 # Make sure to include your frontend origins here
 origins = [
-    "https://strikewise-frontend-cqge.vercel.app",
-    "https://strikewise-frontend-cqge-git-main-balaragavesh-g-ms-projects.vercel.app",
-    "https://strikewise-frontend-cqge-5er0i7u9h-balaragavesh-g-ms-projects.vercel.app",
+    "https://strikewise-frontend.vercel.app",
+    "https://strikewise-frontend-git-main-balaragavesh-g-ms-projects.vercel.app",
+    "https://strikewise-frontend-r1rhp31gv-balaragavesh-g-ms-projects.vercel.app",
     "http://localhost:3000", # Add your local frontend development URL
 ]
 
